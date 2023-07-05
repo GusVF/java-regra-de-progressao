@@ -16,7 +16,7 @@ public class CadastroDeAtividades {
     int activityCount = scanner.nextInt();
     String[] activityName = new String[activityCount];
     int[] activityWeight = new int[activityCount];
-    int totalWeight = 0;
+    int[] activityGrade = new int[activityCount];
 
     for (int i = 0; i < activityCount; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ":");
@@ -26,11 +26,25 @@ public class CadastroDeAtividades {
       System.out.println("Digite o peso da atividade " + (i + 1) + ":");
       activityWeight[i] = scanner.nextInt();
 
-      totalWeight += activityWeight[i];
+      System.out.println("Digite a nota obtida para " + activityName[i] + " :");
+      activityGrade[i] = scanner.nextInt();
+
     }
-    if (totalWeight != 100) {
-      System.out.println("A soma dos pesos das atividades não é igual a 100.");
-      return;
+    double totalScore = 0.0;
+    for (int i = 0; i < activityCount; i++) {
+      double weightPercentege = (double) activityWeight[i] / 100;
+      double activityScore = activityGrade[i] * weightPercentege;
+      totalScore += activityScore;
+    }
+
+    if (totalScore >= 85) {
+      System.out.println("Parabéns! Você alcançou " + totalScore
+          + "%! E temos o prazer de informar que você obteve aprovação!");
+    } else {
+      System.out.println(
+          "Lamentamos informar que, com base na sua pontuação alcançada neste período, "
+              + totalScore
+              + "%, você não atingiu a pontuação mínima necessária para sua aprovação.");
     }
     scanner.close();
   }

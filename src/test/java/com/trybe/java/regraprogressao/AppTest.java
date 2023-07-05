@@ -102,10 +102,12 @@ public class AppTest {
       String actualOutput = outStream.toString();
       String cleanActualOutput = normalizeString(actualOutput);
 
-      assertTrue(cleanActualOutput.contains(normalizeString(EXPECTED_TEXT_TO_TYPE_ACTIVITY_QUANTITY)));
+      assertTrue(
+          cleanActualOutput.contains(normalizeString(EXPECTED_TEXT_TO_TYPE_ACTIVITY_QUANTITY)));
       for (int i = 1; i <= activityQuantity; i++) {
-        String expectedOutput = EXPECTED_TEXT_TO_TYPE_ACTIVITY_NAME + i + EXPECTED_TEXT_TO_TYPE_ACTIVITY_WEIGHT
-            + i;
+        String expectedOutput =
+            EXPECTED_TEXT_TO_TYPE_ACTIVITY_NAME + i + EXPECTED_TEXT_TO_TYPE_ACTIVITY_WEIGHT
+                + i;
         String cleanExpectedOutput = normalizeString(expectedOutput);
         assertTrue(cleanActualOutput.contains(cleanExpectedOutput));
       }
@@ -143,7 +145,8 @@ public class AppTest {
 
       String actualOutput = outStream.toString();
       String cleanActualOutput = normalizeString(actualOutput);
-      assertTrue(cleanActualOutput.contains(normalizeString(EXPECTED_TEXT_TO_TYPE_ACTIVITY_QUANTITY)));
+      assertTrue(
+          cleanActualOutput.contains(normalizeString(EXPECTED_TEXT_TO_TYPE_ACTIVITY_QUANTITY)));
       for (String projectName : activitiesNames) {
         String expectedOutput = EXPECTED_TEXT_TO_TYPE_ACTIVITY_GRADE + projectName;
         String cleanExpectedOutput = normalizeString(expectedOutput);

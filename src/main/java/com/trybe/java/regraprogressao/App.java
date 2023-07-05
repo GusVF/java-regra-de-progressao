@@ -1,8 +1,5 @@
 package com.trybe.java.regraprogressao;
 
-/**
- * App.
- */
 public class App {
 
   /**

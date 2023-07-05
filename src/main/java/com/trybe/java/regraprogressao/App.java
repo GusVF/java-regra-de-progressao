@@ -11,6 +11,6 @@ public class App {
    */
 
   public static void main(String[] args) {
-    CadastroDeAtividades.cadastrarAtividades();
+    CadastroDeAtividades.cadastraAtividades();
   }
 }

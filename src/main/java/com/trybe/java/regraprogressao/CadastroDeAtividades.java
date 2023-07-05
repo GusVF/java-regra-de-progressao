@@ -8,7 +8,7 @@ public class CadastroDeAtividades {
    * This method performs the registration of activities for the current period. It allows the
    * student to enter the names and weights of each activity. The sum of all weights must be 100.
    */
-  public static void cadastrarAtividades() {
+  public static void cadastraAtividades() {
     Scanner scanner = new Scanner(System.in);
 
     System.out.println("Digite a quantidade de atividades para cadastrar:");
